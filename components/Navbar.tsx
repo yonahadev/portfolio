@@ -11,7 +11,7 @@ const navbar = () => {
       </Link>
       <span className="flex items-center justify-center">
         <ThemeToggle />
-        <p className=" font-semibold mr-8 border-x px-2">yonahadev@gmail.com</p>
+        <Button className=" font-semibold mr-8 ">Contact</Button>
       </span>
     </nav>
   );

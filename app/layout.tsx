@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="w-full h-full">
-      <body className={`${inter.className} + w-full h-full flex flex-col`}>
+      <body className={`${inter.className} + w-full h-full `}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           {children}
