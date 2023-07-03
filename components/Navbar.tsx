@@ -11,12 +11,7 @@ const navbar = () => {
       </Link>
       <span className="flex items-center justify-center">
         <ThemeToggle />
-        <Button
-          variant={"outline"}
-          className=" font-semibold mr-8 border-x px-2"
-        >
-          contact me
-        </Button>
+        <p className=" font-semibold mr-8 border-x px-2">yonahadev@gmail.com</p>
       </span>
     </nav>
   );
