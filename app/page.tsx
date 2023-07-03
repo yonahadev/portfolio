@@ -53,10 +53,38 @@ export default function Home() {
             />
           </div>
 
-          <ul className="justify-self-start ml-10">
-            <li>User Interfaces</li>
-            <li>point two</li>
-            <li>point three</li>
+          <ul className="justify-self-start ml-10 w-3/4 space-y-16 list-disc">
+            <li>
+              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                User Interfaces
+              </h4>
+              <p className="leading-7">
+                Interactive and modern user interfaces to help you connect with
+                your users. Custom graphics and photos are available.
+              </p>
+            </li>
+            <li>
+              {" "}
+              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                Search Engine Optimisation
+              </h4>
+              <p className="leading-7">
+                Websites built to rank highly in search engines so you can reach
+                as many people as possible. Configured from the ground up with
+                modern technologies.
+              </p>
+            </li>
+            <li>
+              {" "}
+              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                Quality control
+              </h4>
+              <p className="leading-7">
+                Putting great ideas into even greater implementations. I work
+                closely with clients to ensure the highest level of quality to
+                suit your needs.
+              </p>
+            </li>
           </ul>
         </div>
       </section>
