@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -17,8 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="w-full h-full">
       <body className={`${inter.className} + w-full h-full flex flex-col`}>
-        <Navbar />
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
