@@ -1,10 +1,11 @@
 "use client";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
 const ScrollNavbar = () => {
   const [scrollPosition, setScrollPosition] = useState<string | null>("home");
-
+  const { theme } = useTheme();
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -27,7 +28,13 @@ const ScrollNavbar = () => {
     <ul className="sticky top-24 row-span-6 justify-self-center self-start mt-40 font-semibold pl-2 border-l sm:text-2xl hidden sm:block">
       <Link
         className={`${
-          scrollPosition === "home" ? "text-black" : "text-gray-300"
+          scrollPosition === "home"
+            ? theme === "dark"
+              ? "text-white"
+              : "text-black"
+            : theme === "dark"
+            ? "text-gray-700"
+            : "text-gray-300"
         }`}
         href="#navbar-top"
       >
@@ -35,7 +42,13 @@ const ScrollNavbar = () => {
       </Link>
       <Link
         className={`${
-          scrollPosition === "skills" ? "text-black" : "text-gray-300"
+          scrollPosition === "skills"
+            ? theme === "dark"
+              ? "text-white"
+              : "text-black"
+            : theme === "dark"
+            ? "text-gray-700"
+            : "text-gray-300"
         }`}
         href="#skills"
       >
@@ -43,7 +56,13 @@ const ScrollNavbar = () => {
       </Link>
       <Link
         className={`${
-          scrollPosition === "projects" ? "text-black" : "text-gray-300"
+          scrollPosition === "projects"
+            ? theme === "dark"
+              ? "text-white"
+              : "text-black"
+            : theme === "dark"
+            ? "text-gray-700"
+            : "text-gray-300"
         }`}
         href="#projects"
       >
