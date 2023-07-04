@@ -5,9 +5,12 @@ import { Button } from "./ui/button";
 
 const navbar = () => {
   return (
-    <nav className="h-16 w-full border-b pb-2 flex justify-between items-center">
+    <nav
+      id="home"
+      className="h-16 w-full border-b pb-2 flex justify-between items-center section-marker"
+    >
       <Link href={"/"} className="text-lg font-semibold ml-8 border-x px-2">
-        yonahadev
+        <h1>yonahadev</h1>
       </Link>
       <span className="flex items-center justify-center">
         <ThemeToggle />

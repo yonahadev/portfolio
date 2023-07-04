@@ -16,8 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="w-full h-full">
-      <body className={`${inter.className} + w-full h-full `}>
+    <html lang="en" className="w-full h-full ">
+      <body
+        id="bodyElement"
+        className={`${inter.className} + w-full h-full scroll-smooth`}
+      >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           {children}
@@ -26,3 +29,4 @@ export default function RootLayout({
     </html>
   );
 }
+// p@leBean52
