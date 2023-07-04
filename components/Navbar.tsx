@@ -6,8 +6,8 @@ import { Button } from "./ui/button";
 const navbar = () => {
   return (
     <nav
-      id="home"
-      className="h-16 w-full border-b pb-2 flex justify-between items-center section-marker"
+      id="navbar-top"
+      className="h-16 w-full border-b pb-2 flex justify-between items-center "
     >
       <Link href={"/"} className="text-lg font-semibold ml-8 border-x px-2">
         <h1>yonahadev</h1>

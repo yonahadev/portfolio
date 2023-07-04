@@ -17,6 +17,7 @@ export default function Home() {
   return (
     <>
       <main
+        id="home"
         className="w-full h-[calc(100%-4rem)] flex flex-col justify-center items-center backdrop-blur-md bg-cover bg-center section-marker"
         style={{
           backgroundImage: "url('https://i.imgur.com/ONEMNy6.png')",
