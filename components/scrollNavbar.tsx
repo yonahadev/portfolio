@@ -6,18 +6,18 @@ import React, { useEffect, useRef, useState } from "react";
 const ScrollNavbar = () => {
   const [scrollPosition, setScrollPosition] = useState<string | null>("home");
   const { theme } = useTheme();
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setScrollPosition(entry.target.getAttribute("id"));
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
 
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setScrollPosition(entry.target.getAttribute("id"));
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
     const sections = document.querySelectorAll(".section-marker");
     sections.forEach((section) => {
       observer.observe(section);
@@ -29,10 +29,10 @@ const ScrollNavbar = () => {
       <Link
         className={`${
           scrollPosition === "home"
-            ? theme === "dark"
+            ? theme === "dark" || theme === "system"
               ? "text-white"
               : "text-black"
-            : theme === "dark"
+            : theme === "dark" || theme === "system"
             ? "text-gray-700"
             : "text-gray-300"
         }`}
@@ -43,10 +43,10 @@ const ScrollNavbar = () => {
       <Link
         className={`${
           scrollPosition === "skills"
-            ? theme === "dark"
+            ? theme === "dark" || theme === "system"
               ? "text-white"
               : "text-black"
-            : theme === "dark"
+            : theme === "dark" || theme === "system"
             ? "text-gray-700"
             : "text-gray-300"
         }`}
@@ -57,10 +57,10 @@ const ScrollNavbar = () => {
       <Link
         className={`${
           scrollPosition === "projects"
-            ? theme === "dark"
+            ? theme === "dark" || theme === "system"
               ? "text-white"
               : "text-black"
-            : theme === "dark"
+            : theme === "dark" || theme === "system"
             ? "text-gray-700"
             : "text-gray-300"
         }`}
