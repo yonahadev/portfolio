@@ -49,16 +49,16 @@ export default function Home() {
           <ChevronDownIcon href="#skills" className="animate-bounce w-6 h-6" />
         </div>
       </main>
-      <section className="grid grid-cols-[20%,80%]">
+      <section className="grid sm:grid-cols-[20%,80%]">
         <ScrollNavbar />
         <section
           id="skills"
-          className="w-full h-screen grid grid-cols-2 grid-rows-[15%,85%] section-marker"
+          className="w-full sm:h-screen flex justify-center items-center flex-col  sm:grid sm:grid-cols-2 sm:grid-rows-[15%,85%] section-marker"
         >
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl border-b pb-2 col-span-2 mt-10">
+          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl border-b pb-2 col-span-2 mt-10 sm:justify-self-start justify-self-center">
             My Skills
           </h1>
-          <div className="relative w-3/4 h-5/6 justify-self-center self-center my-10">
+          <div className="relative w-3/4 h-[70vw] sm:h-5/6 justify-self-center self-center my-10">
             <Image
               src={"https://i.imgur.com/3wd5UNz.png"}
               alt="graphic"
@@ -69,22 +69,22 @@ export default function Home() {
               className="rounded-xl shadow-xl"
             />
           </div>
-          <ul className="border-l pl-10 justify-self-start w-4/5 space-y-16 list-disc self-center my-10">
+          <ul className="border-l pl-10 sm:justify-self-start w-4/5 space-y-8 sm:space-y-16 list-disc sm:self-center my-10 justify-self-center">
             <li>
-              <h4 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+              <h4 className="scroll-m-20 sm:text-2xl font-semibold tracking-tight">
                 User Interfaces
               </h4>
-              <p className="leading-7 ">
+              <p className="leading-7 sm:text-lg text-sm">
                 Interactive and modern user interfaces to help you connect with
                 your users. Custom graphics and photos are available.
               </p>
             </li>
             <li>
               {" "}
-              <h4 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+              <h4 className="scroll-m-20 sm:text-2xl font-semibold tracking-tight">
                 Search Engine Optimisation
               </h4>
-              <p className="leading-7 ">
+              <p className="leading-7 sm:text-lg text-sm">
                 Websites built to rank highly in search engines so you can reach
                 as many people as possible. Configured from the ground up with
                 modern technologies.
@@ -92,10 +92,10 @@ export default function Home() {
             </li>
             <li>
               {" "}
-              <h4 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+              <h4 className="scroll-m-20 sm:text-2xl font-semibold tracking-tight">
                 Quality control
               </h4>
-              <p className="leading-7 ">
+              <p className="leading-7 sm:text-lg text-sm">
                 Putting great ideas into even greater implementations. I work
                 closely with clients to ensure the highest level of quality to
                 suit your needs.
@@ -110,8 +110,6 @@ export default function Home() {
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl border-b pb-2 col-span-2 ">
             My Projects
           </h1>
-          <div className="h-full w-full">Content</div>
-          <div className="w-full h-full">More content</div>
         </section>
       </section>
     </>

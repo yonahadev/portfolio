@@ -24,7 +24,7 @@ const ScrollNavbar = () => {
   }, []);
 
   return (
-    <ul className="sticky top-24 row-span-6 justify-self-center self-start mt-40 font-semibold pl-2 border-l text-2xl">
+    <ul className="sticky top-24 row-span-6 justify-self-center self-start mt-40 font-semibold pl-2 border-l sm:text-2xl hidden sm:block">
       <Link
         className={`${
           scrollPosition === "home" ? "text-black" : "text-gray-300"
