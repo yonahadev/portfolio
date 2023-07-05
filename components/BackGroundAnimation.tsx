@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 const BackGroundAnimation = () => {
   const [variants, setVariants] = useState<any | null>([]);
   const [textChoices, setTextChoices] = useState<string[]>([]);
+  const [textSize, setTextSize] = useState<string>();
 
   const generateText = () => {
     const viewportWidth = window.innerWidth;
@@ -18,7 +19,7 @@ const BackGroundAnimation = () => {
           x: -viewportWidth,
           transition: {
             repeat: Infinity,
-            duration: Math.floor(Math.random() * 13) + 4,
+            duration: Math.floor(Math.random() * 13) + 5,
             delay: Math.floor(Math.random() * 6),
           },
         },
@@ -47,6 +48,23 @@ const BackGroundAnimation = () => {
     setTextChoices(textChoices);
   }, []);
 
+  const generateTextSize = () => {
+    const number = Math.floor(Math.random() * 6) + 2;
+    if (number === 2) {
+      return "text-2xl";
+    } else if (number === 3) {
+      return "text-3xl";
+    } else if (number === 4) {
+      return "text-4xl";
+    } else if (number === 5) {
+      return "text-5xl";
+    } else if (number === 6) {
+      return "text-6xl";
+    } else if (number === 7) {
+      return "text-7xl";
+    }
+  };
+
   return (
     <div
       id="moving-text-parent"
@@ -59,9 +77,7 @@ const BackGroundAnimation = () => {
               variants={variants[i]}
               initial="initial"
               animate="animate"
-              className={`font-semibold text-${
-                Math.floor(Math.random() * 7) + 3
-              }xl  whitespace-nowrap`}
+              className={`font-semibold whitespace-nowrap ${generateTextSize()}`}
             >
               {textChoices[i]}
             </motion.div>
