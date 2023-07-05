@@ -57,7 +57,7 @@ export default function Home() {
         <ScrollNavbar />
         <section
           id="about"
-          className="w-full sm:h-[80svh] flex justify-center items-center flex-col  sm:grid sm:grid-cols-2 sm:grid-rows-[10%,30%,30%,30%] section-marker"
+          className="w-full space-y-6 sm:h-[80svh] flex justify-center items-center flex-col  sm:grid sm:grid-cols-2 sm:grid-rows-[10%,30%,30%,30%] section-marker"
         >
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl border-b pb-2 col-span-2 mt-10 sm:justify-self-start justify-self-center">
             About me
@@ -66,7 +66,7 @@ export default function Home() {
             <div className="w-1/6 h-1/2 flex justify-center items-center">
               <TbBulb size={120} className="text-yellow-300 " />
             </div>
-            <span className="w-3/5 pl-2 border-l">
+            <span className="sm:w-3/5 w-4/5 pl-2 border-l">
               <h4 className="scroll-m-20 sm:text-3xl font-semibold tracking-tight">
                 Turning ideas into interactivity
               </h4>
@@ -77,18 +77,17 @@ export default function Home() {
               </p>
             </span>
           </div>
-          <div className="ml-40 col-span-2 h-full flex justify-start items-center">
+          <div className="sm:ml-40 col-span-2 h-full sm:flex-row flex flex-row-reverse justify-start items-center">
             <div className="w-1/6 h-1/2 flex justify-center items-center">
               <MdOutlineDesignServices size={120} className="text-blue-800" />
             </div>
-            <span className="w-3/5 pl-2 border-l">
+            <span className="sm:w-3/5 w-4/5 sm:pl-2 sm:border-l pr-2 border-r">
               <h4 className="scroll-m-20 sm:text-3xl font-semibold tracking-tight">
                 Utilising modern design principles
               </h4>
               <p className="leading-7 sm:text-xl text-sm">
-                I work with modern technologies in an ever developing industry
-                and consider design principles old and new to deliver effective
-                user interfaces and finalised products.
+                I follow design practices to try and direct user flow and make
+                sure your customers are where they should be.
               </p>
             </span>
           </div>
@@ -96,15 +95,13 @@ export default function Home() {
             <div className="w-1/6 h-3/5 flex justify-center items-center">
               <BiLogoReact size={120} className="text-cyan-400 " />
             </div>
-            <span className="w-3/5 pl-2 border-l">
+            <span className="sm:w-3/5 w-4/5 pl-2 border-l">
               <h4 className="scroll-m-20 sm:text-3xl font-semibold tracking-tight">
                 Using industry standard technologies
               </h4>
               <p className="leading-7 sm:text-xl text-sm">
-                I use my skills in Javascript & Typescript to code React and
-                NextJS applications built from the ground up for optimal
-                performance. Styling with Tailwind CSS and knowledge of Python
-                will help me to suit any need.
+                I work with Javascript & Typescript to code React and NextJS
+                applications style with Tailwind CSS.
               </p>
             </span>
           </div>

@@ -1,14 +1,14 @@
 "use client";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const ScrollNavbar = () => {
   const [scrollPosition, setScrollPosition] = useState<string | null>("home");
-  const { theme } = useTheme();
+  const observerRef = useRef<IntersectionObserver | null>(null); // Create a ref for the IntersectionObserver
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -18,18 +18,32 @@ const ScrollNavbar = () => {
       },
       { threshold: 0.5 }
     );
-    const sections = document.querySelectorAll(".section-marker");
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
+
+    return () => {
+      // Cleanup the observer on component unmount
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
   }, []);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll(".section-marker");
+
+    // Observe the sections when the ref is available
+    if (observerRef.current) {
+      sections.forEach((section) => {
+        observerRef.current!.observe(section);
+      });
+    }
+  }, [observerRef.current]);
 
   return (
     <ul className="sticky top-24 row-span-6 justify-self-center self-start mt-40 font-semibold pl-2 border-l sm:text-2xl hidden sm:block">
       <Link
         className={`${
           scrollPosition === "home" ? "opacity-100" : "opacity-30"
-        } `}
+        }`}
         href="#navbar-top"
       >
         <li>Home</li>
