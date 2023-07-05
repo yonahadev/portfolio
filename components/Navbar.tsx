@@ -7,7 +7,7 @@ const navbar = () => {
   return (
     <nav
       id="navbar-top"
-      className="h-16 w-full border-b pb-2 flex justify-between items-center "
+      className="relative z-10 h-16 w-full border-b pb-2 flex justify-between items-center "
     >
       <Link href={"/"} className="text-lg font-semibold ml-8 border-x px-2">
         <h1>yonahadev</h1>

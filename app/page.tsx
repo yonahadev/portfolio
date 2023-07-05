@@ -1,3 +1,4 @@
+import BackGroundAnimation from "@/components/BackGroundAnimation";
 import ScrollNavbar from "@/components/scrollNavbar";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
@@ -18,19 +19,17 @@ export default function Home() {
     <>
       <main
         id="home"
-        className="w-full h-[calc(100%-4rem)] flex flex-col justify-center items-center backdrop-blur-md bg-cover bg-center section-marker"
-        style={{
-          backgroundImage: "url('https://i.imgur.com/ONEMNy6.png')",
-        }}
+        className="w-full h-[calc(100%-4rem)] flex flex-col justify-center items-center section-marker"
       >
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl sm:w-3/5 w-5/6 ">
+        <BackGroundAnimation />
+        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl sm:w-3/5 w-5/6 relative z-10">
           Hi, I'm Thomas.
         </h1>
-        <h2 className="scroll-m-20 border-b pb-2 sm:text-3xl font-semibold tracking-tight transition-colors mt-2 first:mt-0 sm:w-3/5 w-5/6 text-xl">
+        <h2 className="scroll-m-20  sm:text-3xl font-semibold tracking-tight transition-colors mt-2 first:mt-0 sm:w-3/5 w-5/6 text-xl relative z-10">
           I'm a freelance web developer from the United Kingdom focusing on
           delivering interactive user interfaces.
         </h2>
-        <div className="sm:w-3/5 w-5/6 mt-2">
+        <div className="sm:w-3/5 w-5/6 mt-2 relative z-10">
           <Link
             href={"#skills"}
             className={`${buttonVariants({ variant: "outline" })} mr-2`}
@@ -44,9 +43,11 @@ export default function Home() {
             Contact me
           </Link>
         </div>
-        <div className="scroll-m-20 text-2xl font-semibold tracking-tight absolute bottom-10 flex flex-col items-center justify-center">
+        <div className="scroll-m-20 text-2xl font-semibold tracking-tight absolute bottom-10 flex flex-col items-center justify-center z-10">
           Learn more
-          <ChevronDownIcon href="#skills" className="animate-bounce w-6 h-6" />
+          <Link href="#skills">
+            <ChevronDownIcon className="animate-bounce w-6 h-6" />
+          </Link>
         </div>
       </main>
       <section className="grid sm:grid-cols-[20%,80%]">
