@@ -18,15 +18,14 @@ const BackGroundAnimation = () => {
           x: -viewportWidth,
           transition: {
             repeat: Infinity,
-            duration: Math.floor(Math.random() * 10) + 3,
-            delay: Math.floor(Math.random() * 4) + 1,
+            duration: Math.floor(Math.random() * 13) + 4,
+            delay: Math.floor(Math.random() * 6),
           },
         },
       };
       variants.push(animationVariant);
     }
     setVariants(variants);
-    console.log(variants);
   };
 
   useEffect(() => {
@@ -34,14 +33,14 @@ const BackGroundAnimation = () => {
     const textChoices = [
       "Coffee: fueling developers since 10,000 BC",
       "I code therefore I am... confused",
-      "I'm not lazy, I'm just on energy-saving mode",
-      "My code's so fast, it's measured in parsecs",
-      "Coding: where you can make your errors on purpose",
+      "Object reference is not set to instance of an object",
+      "",
+      "'Gapped by his own CSS'",
       "Debugging: removing the needles from the haystack",
       "I speak four languages: English, JavaScript, sarcasm, and binary",
       "I'm not a great coder, but I'm an excellent googler",
       "Code never lies, comments sometimes do",
-      "I'm not anti-social, I'm just interface-challenged",
+      "#41: most painful night of my life",
       "I put the 'fun' in 'function'... sometimes",
       "Code like a butterfly, test like a bee",
     ];
@@ -51,7 +50,7 @@ const BackGroundAnimation = () => {
   return (
     <div
       id="moving-text-parent"
-      className="w-screen h-screen top-0 left-0 absolute z-0 opacity-10 flex flex-col justify-center items-center space-y-6 overflow-hidden "
+      className="w-screen h-[calc(100%-4rem)] top-16 left-0 absolute z-0 opacity-10 flex flex-col justify-center items-center space-y-6 overflow-hidden "
     >
       {textChoices.length !== 0
         ? Array.from({ length: 12 }).map((_, i) => (
@@ -60,9 +59,9 @@ const BackGroundAnimation = () => {
               variants={variants[i]}
               initial="initial"
               animate="animate"
-              className={`text-${
-                Math.floor(Math.random() * 6) + 3
-              }xl font-semibold`}
+              className={`font-semibold text-${
+                Math.floor(Math.random() * 7) + 3
+              }xl  whitespace-nowrap`}
             >
               {textChoices[i]}
             </motion.div>

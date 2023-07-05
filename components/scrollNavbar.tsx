@@ -36,6 +36,14 @@ const ScrollNavbar = () => {
       </Link>
       <Link
         className={`${
+          scrollPosition === "about" ? "opacity-100" : "opacity-30"
+        }`}
+        href="#about"
+      >
+        <li>About</li>
+      </Link>
+      <Link
+        className={`${
           scrollPosition === "skills" ? "opacity-100" : "opacity-30"
         }`}
         href="#skills"

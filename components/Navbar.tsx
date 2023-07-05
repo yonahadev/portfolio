@@ -1,4 +1,3 @@
-import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import { Button } from "./ui/button";
@@ -7,7 +6,7 @@ const navbar = () => {
   return (
     <nav
       id="navbar-top"
-      className="relative z-10 h-16 w-full border-b pb-2 flex justify-between items-center "
+      className="sm:relative z-20 fixed h-16 w-full border-b pb-2 flex justify-between items-center backdrop-blur-md"
     >
       <Link href={"/"} className="text-lg font-semibold ml-8 border-x px-2">
         <h1>yonahadev</h1>
